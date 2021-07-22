@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Aparecida Nutrição</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h1 id="titulo">Aparecida Nutrição</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2 id="titulo-form">Adicionar novo paciente</h2>
+				<form id="form-add">
+					<div class="grupo">
+						<label for="nome">Nome:</label>
+						<input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
+					</div>
+					<div class="grupo">
+						<label for="peso">Peso:</label>
+						<input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
+					</div>
+					<div class="grupo">
+						<label for="altura">Altura:</label>
+						<input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente"
+							class="campo campo-medio">
+					</div>
+					<div class="grupo">
+						<label for="gordura">% de Gordura:</label>
+						<input id="gordura" type="text" placeholder="digite a percentagem de gordura do seu paciente"
+							class="campo campo-medio">
+					</div>
+					<button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+				</form>
+			</section>
+			<div class="blank"></div>
+			<section class="container">
+				<h2>Meus pacientes</h2>
+				<div class="busca">
+					<label for="filtrar-tabela">Busque:</label>
+					<input class="input-busca" type="text" name="filtro" placeholder="Nome do paciente">
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Peso(kg)</th>
+							<th>Altura(m)</th>
+							<th>Gordura Corporal(%)</th>
+							<th>IMC</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-pacientes">
+					</tbody>
+				</table>
+				<button type="button" id="addPacientes" class="botao bto-principal">Importar Pacientes</button>
+			</section>
+		</main>
+		<script src="./js/form.js"></script>
+		<script src="./js/remover-pacientes.js"></script>
+		<script src="./js/busca.js"></script>
+		<script src="./js/addPaciente.js"></script>
+	</body>
+</html>
